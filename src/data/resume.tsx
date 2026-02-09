@@ -9,13 +9,9 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/banglore",
   description:
     "22 y/o entrepreneur, builder & developer based in Melbourne. I build SaaS products and apps.",
-  summary: [
-    "Scaling [***MagicLabs***](https://www.magiclabs.studio), an agency building MVPs, AI agents & helping founders grow startups",
-    "Building & scaling apps with ***100+ users***",
-    "***5+ international hackathon wins***",
-    "Co-founder of [***FoundersKit***](https://founderskit.in)",
-  ],
-  avatarUrl: "/ritesh.jpg",
+  summary:
+    "I'm a software engineer at [Sweethawk](https://sweethawk.com) and co-founder of [MagicLabs](https://www.magiclabs.studio), where I build MVPs, AI agents & help founders grow their startups. I've won **5+ international hackathons**, scaled apps to **100+ users**, and co-founded [FoundersKit](https://founderskit.in). I love turning ideas into products that people actually use.",
+  avatarUrl: "/ritesh-3.png",
   skills: [
     "React",
     "Next.js",
@@ -25,6 +21,7 @@ export const DATA = {
     "Langchain",
     "AI Automation",
     "RAG",
+    "Ruby on Rails",
     "Postgres",
     "Docker",
     "C++",
@@ -76,6 +73,18 @@ export const DATA = {
 
   work: [
     {
+      company: "Sweethawk",
+      href: "https://sweethawk.com/",
+      badges: [],
+      location: "Melbourne",
+      title: "Software Engineer",
+      logoUrl: "/sweethawk.png",
+      start: "Nov 2025",
+      end: "Present",
+      description:
+        "Building, designing and scaling Sweethawk apps for Zendesk. Full-stack development with Ruby on Rails, PostgreSQL, and architecting the product from the ground up."
+    },
+    {
       company: "MagicLabs",
       href: "https://www.magiclabs.studio/",
       badges: [],
@@ -119,6 +128,32 @@ export const DATA = {
     },
   ],
   projects: [
+    {
+      title: "GeoInsight",
+      href: "https://apps.apple.com/us/app/geoinsight-geopolitics/id6757919941",
+      dates: "January 2026 - Present",
+      active: true,
+      description:
+        "An iOS app that transforms geopolitical understanding into an interactive experience. Explore 200+ countries on a living 3D globe with AI-powered insights, conflict layers, military bases, oil routes, and more.",
+      technologies: [
+        "React Native",
+        "OpenAI",
+        "PostgreSQL",
+        "RevenueCat",
+        "Clerk Auth",
+        "React Globe",
+        "App Store",
+      ],
+      links: [
+        {
+          type: "App Store",
+          href: "https://apps.apple.com/us/app/geoinsight-geopolitics/id6757919941",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
     {
       title: "MagicLabs",
       href: "https://www.magiclabs.studio/",
