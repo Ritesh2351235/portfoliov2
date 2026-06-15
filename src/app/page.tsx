@@ -1,6 +1,7 @@
 import { HackathonCard } from "@/components/hackathon-card";
 import { ImageGallery } from "@/components/image-gallery";
-import InteractiveIPod from "@/components/interactive-ipod";
+import { MusicPlayer } from "@/components/ui/music-player";
+import { GithubCalendar } from "@/components/ui/github-calendar";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
@@ -34,7 +35,7 @@ export default function Page() {
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-32 border overflow-hidden rounded-full">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} className="object-cover object-bottom scale-[0.85] rounded-full" />
+                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} className="object-cover scale-[1.4] rounded-full" style={{ objectPosition: "50% 22%" }} />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
             </BlurFade>
@@ -115,10 +116,21 @@ export default function Page() {
           </div>
         </div>
       </section>
-      {/* Single iPod — inline on mobile, repositioned to top-right margin on xl */}
-      <section id="vibes" className="w-full py-6 xl:absolute xl:top-0 xl:left-[calc(50%+370px)] xl:w-auto xl:py-0 xl:space-y-0">
+      <section id="github">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 10.5}>
+            <h2 className="text-xl font-bold">GitHub Activity</h2>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+            <div className="overflow-x-auto pb-2">
+              <GithubCalendar username="Ritesh2351235" colorSchema="green" />
+            </div>
+          </BlurFade>
+        </div>
+      </section>
+      <section id="vibes" className="w-full py-6">
         <BlurFade delay={BLUR_FADE_DELAY * 10}>
-          <div className="flex flex-col items-center justify-center space-y-4 text-center xl:hidden">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                 Vibes
@@ -127,16 +139,17 @@ export default function Page() {
                 what I&apos;m listening to
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Put on a track and enjoy scrolling through my work.
+                Tap the record to spin up a track.
               </p>
             </div>
           </div>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 10.5}>
-          <div className="flex justify-center mt-8 xl:mt-0 xl:justify-start xl:scale-[0.62] xl:origin-top-left" style={{ transformOrigin: "top center" }}>
-            <div className="scale-[0.85] sm:scale-100 origin-top">
-              <InteractiveIPod />
-            </div>
+          <div className="flex justify-center mt-10">
+            <MusicPlayer
+              src="https://www.youtube.com/watch?v=5NV6Rdv1a3I"
+              coverArt="https://img.youtube.com/vi/5NV6Rdv1a3I/maxresdefault.jpg"
+            />
           </div>
         </BlurFade>
       </section>

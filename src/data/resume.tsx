@@ -1,17 +1,17 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { HomeIcon, NotebookIcon, NotebookPenIcon } from "lucide-react";
 
 export const DATA = {
   name: "Ritesh Hiremath",
   initials: "RH",
   url: "https://riteshhiremath.com",
-  location: "India",
-  locationLink: "https://www.google.com/maps/place/banglore",
+  location: "Melbourne, Australia",
+  locationLink: "https://www.google.com/maps/place/melbourne",
   description:
-    "22 y/o entrepreneur, builder & developer based in Melbourne. I build SaaS products and apps.",
+    "24 y/o software developer based in Melbourne. I build SaaS products, AI agents & apps.",
   summary:
-    "I'm a software engineer at [Sweethawk](https://sweethawk.com) and co-founder of [MagicLabs](https://www.magiclabs.studio), where I build MVPs, AI agents & help founders grow their startups. I've won **5+ international hackathons**, scaled apps to **100+ users**, and co-founded [FoundersKit](https://founderskit.in). I love turning ideas into products that people actually use.",
-  avatarUrl: "/ritesh-3.png",
+    "I'm a software developer at [Sweethawk](https://sweethawk.com), where I build and scale SaaS apps for Zendesk with Ruby on Rails and PostgreSQL. On the side I ship AI agents and side projects through [MagicLabs](https://www.magiclabs.studio). I've won **5+ international hackathons** and love turning ideas into products that people actually use.",
+  avatarUrl: "/ritesh-5.jpg",
   skills: [
     "React",
     "Next.js",
@@ -28,6 +28,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "/journal", icon: NotebookPenIcon, label: "Journal" },
     { href: "/book", icon: NotebookIcon, label: "Book" },
   ],
   contact: {
@@ -77,7 +78,7 @@ export const DATA = {
       href: "https://sweethawk.com/",
       badges: [],
       location: "Melbourne",
-      title: "Software Engineer",
+      title: "Software Developer",
       logoUrl: "/sweethawk.png",
       start: "Nov 2025",
       end: "Present",
@@ -525,5 +526,55 @@ export const DATA = {
       src: "/gallery/9.jpg",
       alt: "Travel memories"
     }
-  ]
+  ],
+  journal: [
+    {
+      type: "event",
+      date: "Jun 2026",
+      caption: "AI Engineer Melbourne ✦",
+      text: "Spent the day at AI Engineer Melbourne. Walked in unsure how I'd compete using AI for everything, left realizing the fundamentals still matter, and that I want to be a product engineer, not just a coder.",
+      mood: "🧠",
+      href: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7471207495823159296/",
+      tape: "amber",
+      rotate: -1.5,
+    },
+    {
+      type: "photo",
+      date: "Jun 2026",
+      caption: "rambler's track, the dandenongs 🌿",
+      src: "/ritesh-5.jpg",
+      fit: "contain",
+      aspect: "3 / 4",
+      tape: "blue",
+      rotate: 2.5,
+    },
+    {
+      type: "event",
+      date: "May 2026",
+      caption: "Claude Impact Lab, first APAC cohort 🙌",
+      text: "First Anthropic Claude Impact Lab hackathon in Melbourne. A weekend of building, experimenting & connecting with the city's AI community as part of the first APAC cohort.",
+      mood: "🤝",
+      href: "https://www.linkedin.com/feed/update/urn:li:share:7463116519116279808/",
+      tape: "pink",
+      rotate: 1.5,
+    },
+    {
+      type: "photo",
+      date: "May 2026",
+      caption: "building all weekend ⚡",
+      src: "/gallery/3.jpg",
+      tape: "none",
+      pin: true,
+      rotate: -2.5,
+    },
+    {
+      type: "note",
+      date: "Apr 2026",
+      text: "three pages of bad ideas.\none of them might not be.",
+      mood: "☕",
+      tape: "none",
+      pin: true,
+      rotate: 2,
+    },
+  ],
 } as const;
